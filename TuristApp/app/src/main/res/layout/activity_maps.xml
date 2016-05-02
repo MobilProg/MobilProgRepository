@@ -1,0 +1,147 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="hu.uniobuda.nik.turistapp.MapsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<fragment
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/map"
+    android:name="com.google.android.gms.maps.SupportMapFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_below="@+id/toolbarseged"
+     >
+
+</fragment>
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbarseged"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary">
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textColor="@color/feher"
+                android:textSize="22sp"/>
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/turistajelzesekgomb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+
+                android:src="@drawable/ic_menu_white_24dp"/>
+
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/segelyhivo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginRight="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+
+                android:src="@android:drawable/sym_action_call"/>
+
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/helyeklistazasagomb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_gravity="end"
+                android:layout_marginRight="40dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/colorPrimary"
+                android:src="@android:drawable/ic_dialog_map" />
+
+
+        </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/morsegomb"
+        android:layout_below="@+id/toolbarseged"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+
+        android:layout_marginBottom="5dp"
+        android:tint="@color/szurke"
+        android:src="@drawable/ic_wb_incandescent_black_24dp" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/TFaddress"
+
+
+        android:background="#e0e0e0"
+        android:hint="Keresés..."
+        android:layout_alignTop="@+id/helyhozzaadasgomb"
+        android:layout_toLeftOf="@+id/helyhozzaadasgomb"
+        android:layout_toStartOf="@+id/helyhozzaadasgomb" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/mylocationgomb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:tint="@color/szurke"
+
+        android:src="@android:drawable/ic_menu_mylocation"
+        android:layout_below="@+id/morsegomb"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Bsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/piros"
+
+        android:tint="@color/szurke"
+
+        android:src="@android:drawable/ic_menu_search"
+        android:onClick="onSearch"
+        android:layout_above="@+id/helyhozzaadasgomb"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/helyhozzaadasgomb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="1dp"
+        android:background="@color/piros"
+        android:tint="@color/szurke"
+        android:src="@android:drawable/ic_menu_add" />
+
+
+</RelativeLayout>
